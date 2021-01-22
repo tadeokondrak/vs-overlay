@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "flash3kyuu_deband";
-  version = "2.0.0-1";
+  version = "unstable-2018-08-09";
 
   src = fetchFromGitHub {
     owner = "SAPikachu";
     repo = pname;
-    rev = version;
-    sha256 = "0qfm85z2r9kr56i406bfz04wb92amkrsgbhdrp0dpfp6xvhv72nj";
+    rev = "c57e9d6a535ec9a85fb5415a405f099cbe69f535";
+    sha256 = "1jkp6b29adjfwl94r8snvk4fv2vy0rgvswsyda5f4jb3lf9hds59";
   };
 
   wafConfigureFlags = [ "--libdir=${placeholder "out"}/lib/vapoursynth" ];
