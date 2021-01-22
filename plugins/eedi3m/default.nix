@@ -18,12 +18,10 @@ stdenv.mkDerivation rec {
   BOOST_INCLUDEDIR = "${lib.getDev boost}/include";
   BOOST_LIBRARYDIR = "${lib.getLib boost}/lib";
 
-  installPhase =
-    let
-      ext = stdenv.targetPlatform.extensions.sharedLibrary;
-    in ''
-      install -D libeedi3m${ext} $out/lib/vapoursynth/libeedi3m${ext}
-    '';
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
 
   meta = with stdenv.lib; {
     description = "Renewed EEDI3 filter for VapourSynth";

@@ -14,12 +14,10 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkg-config ];
   buildInputs = [ vapoursynth ];
 
-  installPhase =
-    let
-      ext = stdenv.targetPlatform.extensions.sharedLibrary;
-    in ''
-      install -D libaddgrain${ext} $out/lib/vapoursynth/libaddgrain${ext}
-    '';
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
 
   meta = with stdenv.lib; {
     description = "AddGrain filter for VapourSynth";

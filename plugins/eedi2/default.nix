@@ -14,12 +14,10 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkg-config ];
   buildInputs = [ vapoursynth ];
 
-  installPhase =
-    let
-      ext = stdenv.targetPlatform.extensions.sharedLibrary;
-    in ''
-      install -D libeedi2${ext} $out/lib/vapoursynth/libeedi2${ext}
-    '';
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
 
   meta = with stdenv.lib; {
     description = "EEDI2 filter for VapourSynth";

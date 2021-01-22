@@ -14,6 +14,11 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkg-config ];
   buildInputs = [ vapoursynth ];
 
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
+
   installPhase =
     let
       ext = stdenv.targetPlatform.extensions.sharedLibrary;

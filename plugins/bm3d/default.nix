@@ -14,14 +14,10 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkg-config ];
   buildInputs = [ vapoursynth fftwSinglePrec ];
 
-  # i could not find a way to override the default meson install dir.
-  # patching the file didn't work
-  installPhase =
-    let
-      ext = stdenv.targetPlatform.extensions.sharedLibrary;
-    in ''
-      install -D libbm3d${ext} $out/lib/vapoursynth/libbm3d${ext}
-    '';
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
 
   meta = with stdenv.lib; {
     description = "BM3D denoising filter for VapourSynth";

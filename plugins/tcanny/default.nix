@@ -18,12 +18,10 @@ stdenv.mkDerivation rec {
   BOOST_INCLUDEDIR = "${lib.getDev boost}/include";
   BOOST_LIBRARYDIR = "${lib.getLib boost}/lib";
 
-  installPhase =
-    let
-      ext = stdenv.targetPlatform.extensions.sharedLibrary;
-    in ''
-      install -D libtcanny${ext} $out/lib/vapoursynth/libtcanny${ext}
-    '';
+  postPatch = ''
+    substituteInPlace meson.build \
+        --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
+  '';
 
   meta = with stdenv.lib; {
     description = "TCanny filter for VapourSynth";
