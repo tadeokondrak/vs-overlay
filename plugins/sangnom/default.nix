@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-sangnom";
-  version = "r41";
+  version = "r42";
 
   src = fetchFromGitHub {
     owner = "dubhater";
     repo = pname;
     rev = version;
-    sha256 = "1q6iz20sjipfmvn16bjvic25n77crpak2nzcvhrp483n5ccqricw";
+    sha256 = "0g9gr4lj5krwlkxb6fc1b408zj5gnl8v36hr66r27h9ndg12flfs";
   };
 
   mesonFlags = [ "--libdir=${placeholder "out"}/lib/vapoursynth" ];
