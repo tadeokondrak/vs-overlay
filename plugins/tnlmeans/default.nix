@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, which, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, which, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-tnlmeans";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ which ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "An implementation of the NL-means denoising algorithm";
     homepage = https://github.com/VFR-maniac/VapourSynth-TNLMeans;
     license = licenses.lgpl2;

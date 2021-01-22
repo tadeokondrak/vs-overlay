@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, autoreconfHook, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, autoreconfHook, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "fmtconv";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ autoreconfHook ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Format conversion tools for VapourSynth";
     homepage = https://github.com/EleonoreMizo/fmtconv;
     license = licenses.wtfpl;

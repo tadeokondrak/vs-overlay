@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
         --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "TCanny filter for VapourSynth";
     homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-TCanny;
     license = licenses.gpl2;

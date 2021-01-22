@@ -1,4 +1,4 @@
-{ fetchFromGitHub, meson, ninja, pkg-config, stdenv, vapoursynth }:
+{ fetchFromGitHub, lib, meson, ninja, pkg-config, stdenv, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-beziercurve";
@@ -14,7 +14,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ meson ninja pkg-config ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A bézier curve plugin for VapourSynth";
     homepage = https://github.com/kewenyu/VapourSynth-BezierCurve;
     license = licenses.mit;

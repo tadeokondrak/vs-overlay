@@ -1,4 +1,4 @@
-{ fetchFromGitHub, meson, ninja, pkg-config, python3, stdenv, vapoursynth }:
+{ fetchFromGitHub, lib, meson, ninja, pkg-config, python3, stdenv, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-descale";
@@ -23,7 +23,7 @@ stdenv.mkDerivation rec {
     install -D ../descale.py $out/${python3.sitePackages}/descale.py
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "VapourSynth plugin to undo upscaling";
     homepage = https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale;
     license = licenses.wtfpl;

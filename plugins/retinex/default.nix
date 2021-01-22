@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, meson, ninja, pkg-config, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, meson, ninja, pkg-config, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-retinex";
@@ -26,7 +26,7 @@ stdenv.mkDerivation rec {
       install -D libretinex${ext} $out/lib/vapoursynth/libretinex${ext}
     '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Retinex algorithm for VapourSynth";
     homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex;
     license = licenses.gpl3;

@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-bifrost";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ pkg-config autoreconfHook ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Bifrost (temporal derainbowing) plugin for Vapoursynth";
     homepage = https://github.com/dubhater/vapoursynth-bifrost;
     license = licenses.unfree; # no license

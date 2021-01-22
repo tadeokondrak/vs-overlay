@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, which, pkg-config, vapoursynth, boost, opencl-headers, ocl-icd }:
+{ lib, stdenv, fetchFromGitHub, which, pkg-config, vapoursynth, boost, opencl-headers, ocl-icd }:
 
 stdenv.mkDerivation rec {
   pname = "knlmeanscl";
@@ -17,7 +17,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ which pkg-config ];
   buildInputs = [ vapoursynth boost opencl-headers ocl-icd ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "An optimized OpenCL implementation of the Non-local means de-noising algorithm";
     homepage = https://github.com/Khanattila/KNLMeansCL;
     license = licenses.gpl3;

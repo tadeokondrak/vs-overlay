@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth, yasm }:
+{ lib, stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth, yasm }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-nnedi3";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ pkg-config autoreconfHook ];
   buildInputs = [ vapoursynth yasm ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "nnedi3 filter for VapourSynth";
     homepage = https://github.com/dubhater/vapoursynth-nnedi3;
     license = licenses.gpl2;

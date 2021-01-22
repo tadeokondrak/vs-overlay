@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, meson, ninja, pkg-config, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, meson, ninja, pkg-config, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-addgrain";
@@ -19,7 +19,7 @@ stdenv.mkDerivation rec {
         --replace "vapoursynth_dep.get_pkgconfig_variable('libdir')" "get_option('libdir')"
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "AddGrain filter for VapourSynth";
     homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-AddGrain;
     license = licenses.gpl2;

@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, vapoursynth }:
 
 let
   ext = stdenv.targetPlatform.extensions.sharedLibrary;
@@ -24,7 +24,7 @@ in stdenv.mkDerivation rec {
     install -D continuity${ext} $out/lib/vapoursynth/continuity${ext}
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Continuity Fixer port for Vapoursynth";
     homepage = https://github.com/MonoS/VS-ContinuityFixer;
     license = licenses.unfree; # no license

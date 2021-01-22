@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, pkg-config, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, pkg-config, vapoursynth }:
 
 let
   ext = stdenv.targetPlatform.extensions.sharedLibrary;
@@ -26,7 +26,7 @@ in stdenv.mkDerivation rec {
     install -D libwwxd${ext} $out/lib/vapoursynth/libwwxd${ext}
   '';
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Xvid-like scene change detection for VapourSynth";
     homepage = https://github.com/dubhater/vapoursynth-wwxd;
     license = licenses.unfree; # no license

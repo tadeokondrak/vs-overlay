@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, wafHook, python3, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, wafHook, python3, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "flash3kyuu_deband";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ wafHook python3 ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A deband library and filter for AviSynth/VapourSynth";
     homepage = https://github.com/SAPikachu/flash3kyuu_deband;
     license = licenses.gpl3;

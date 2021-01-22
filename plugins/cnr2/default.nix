@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, autoreconfHook, pkg-config, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-cnr2";
@@ -16,7 +16,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ pkg-config autoreconfHook ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Temporal chroma denoiser for VapourSynth";
     homepage = https://github.com/dubhater/vapoursynth-cnr2;
     license = licenses.gpl2;

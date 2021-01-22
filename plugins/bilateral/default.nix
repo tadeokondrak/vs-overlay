@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, which, vapoursynth }:
+{ lib, stdenv, fetchFromGitHub, which, vapoursynth }:
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-bilateral";
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ which ];
   buildInputs = [ vapoursynth ];
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Bilateral filter for VapourSynth";
     homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral;
     license = licenses.gpl3;
