@@ -1,4 +1,4 @@
-{ stdenv, fetchFromGitHub, pkg-config, which, vapoursynth, ffmpeg, l-smash }:
+{ lib, stdenv, fetchFromGitHub, pkg-config, which, vapoursynth, ffmpeg, l-smash }:
 
 stdenv.mkDerivation {
   pname = "lsmashsource";
@@ -18,4 +18,12 @@ stdenv.mkDerivation {
 
   nativeBuildInputs = [ pkg-config which ];
   buildInputs = [ vapoursynth ffmpeg l-smash ];
+
+  meta = with lib; {
+    description = "A VapourSynth source plugin based on L-SMASH project";
+    homepage = "https://github.com/VFR-maniac/L-SMASH-Works";
+    license = with licenses; [ isc lgpl21Plus ];
+    maintainers = with maintainers; [ tadeokondrak ];
+    platforms = platforms.all;
+  };
 }
