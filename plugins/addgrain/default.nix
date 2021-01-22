@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation rec {
   pname = "vapoursynth-addgrain";
-  version = "r7";
+  version = "r8";
 
   src = fetchFromGitHub {
     owner = "HomeOfVapourSynthEvolution";
     repo = "VapourSynth-AddGrain";
     rev = version;
-    sha256 = "1lww67qqss7ixhbdhziw3s79fp837xcp66ddn4ryq3srp7rgimdq";
+    sha256 = "0qfazdifs1nq5ll6nvfvy3w9m28s2llm5i203ak6qf0bf98jnh4j";
   };
 
   nativeBuildInputs = [ meson ninja pkg-config ];
