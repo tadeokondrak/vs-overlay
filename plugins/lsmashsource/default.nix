@@ -2,13 +2,13 @@
 
 stdenv.mkDerivation {
   pname = "lsmashsource";
-  version = "unstable-2017-08-12"; # last (only) release is from 2013 and there has still been development
+  version = "unstable-2019-09-15"; # last (only) release is from 2013 and there has still been development
 
   src = fetchFromGitHub {
     owner = "VFR-maniac";
     repo = "L-SMASH-Works";
-    rev = "3edd194b1d82975cee67c0278556615c7d9ebd36";
-    sha256 = "0q5xww6rkfi9vqwafpi9cvvywn1hx5fhkhqz0ck7x235cc3lb2qz";
+    rev = "198cc7814c93209e23f1c6a20daffd651945ba2b";
+    sha256 = "1pb8rrh184pxy5calwfnmm02i0by8vc91c07w4ygj50y8yfqa3br";
   };
 
   preConfigure = ''
