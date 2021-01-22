@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Retinex algorithm for VapourSynth";
-    homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex;
+    homepage = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Retinex";
     license = licenses.gpl3;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

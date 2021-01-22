@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "BM3D denoising filter for VapourSynth";
-    homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D;
+    homepage = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-BM3D";
     license = licenses.mit;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

@@ -26,7 +26,7 @@ in stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Continuity Fixer port for Vapoursynth";
-    homepage = https://github.com/MonoS/VS-ContinuityFixer;
+    homepage = "https://github.com/MonoS/VS-ContinuityFixer";
     license = licenses.unfree; # no license
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

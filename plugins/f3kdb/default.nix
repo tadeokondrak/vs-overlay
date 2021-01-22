@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "A deband library and filter for AviSynth/VapourSynth";
-    homepage = https://github.com/SAPikachu/flash3kyuu_deband;
+    homepage = "https://github.com/SAPikachu/flash3kyuu_deband";
     license = licenses.gpl3;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

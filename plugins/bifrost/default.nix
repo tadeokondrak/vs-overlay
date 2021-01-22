@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Bifrost (temporal derainbowing) plugin for Vapoursynth";
-    homepage = https://github.com/dubhater/vapoursynth-bifrost;
+    homepage = "https://github.com/dubhater/vapoursynth-bifrost";
     license = licenses.unfree; # no license
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

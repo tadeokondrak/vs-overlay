@@ -21,7 +21,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "EEDI2 filter for VapourSynth";
-    homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2;
+    homepage = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-EEDI2";
     license = licenses.gpl2;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

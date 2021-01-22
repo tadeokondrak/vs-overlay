@@ -20,7 +20,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "Bilateral filter for VapourSynth";
-    homepage = https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral;
+    homepage = "https://github.com/HomeOfVapourSynthEvolution/VapourSynth-Bilateral";
     license = licenses.gpl3;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;

@@ -25,7 +25,7 @@ stdenv.mkDerivation rec {
 
   meta = with lib; {
     description = "VapourSynth plugin to undo upscaling";
-    homepage = https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale;
+    homepage = "https://github.com/Irrational-Encoding-Wizardry/vapoursynth-descale";
     license = licenses.wtfpl;
     maintainers = with maintainers; [ tadeokondrak ];
     platforms = platforms.all;
