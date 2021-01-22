@@ -4,13 +4,13 @@ let
   ext = stdenv.targetPlatform.extensions.sharedLibrary;
 in stdenv.mkDerivation rec {
   pname = "vapoursynth-beziercurve";
-  version = "r2";
+  version = "r3";
 
   src = fetchFromGitHub {
     owner = "kewenyu";
     repo = "VapourSynth-BezierCurve";
     rev = version;
-    sha256 = "0c96gqa3f2wrm2d22q9qwqq3mk8jir7dl4chxqb2kpcjv4wh3xjg";
+    sha256 = "1513ndj7sxwihyxx6x9ciyd8jhw9vs6lhzw7fpl7cz7fdj49wwi6";
   };
 
   buildInputs = [ vapoursynth ];
