@@ -18,7 +18,7 @@ self: super: {
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
     retinex = super.callPackage ./plugins/retinex { };
     lsmashsource = super.callPackage ./plugins/lsmashsource { };
-    mvtools = super.callPackage ./plugins/mvtools { };
+    mvtools = super.vapoursynth-mvtools;
     nnedi3 = super.callPackage ./plugins/nnedi3 { };
     sangnom = super.callPackage ./plugins/sangnom { };
     tcanny = super.callPackage ./plugins/tcanny { };
