@@ -22,6 +22,7 @@ self: super: {
     mvtools = super.vapoursynth-mvtools;
     nnedi3 = super.callPackage ./plugins/nnedi3 { };
     nnedi3cl = super.callPackage ./plugins/nnedi3cl { };
+    placebo = super.callPackage ./plugins/placebo { };
     retinex = super.callPackage ./plugins/retinex { };
     sangnom = super.callPackage ./plugins/sangnom { };
     tcanny = super.callPackage ./plugins/tcanny { };
