@@ -46,6 +46,7 @@ in
     znedi3 = super.callPackage ./plugins/znedi3 { };
 
     adjust = callPythonPackage ./plugins/adjust { };
+    edi_rpow2 = callPythonPackage ./plugins/edi_rpow2 { };
 
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };
