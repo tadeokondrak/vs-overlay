@@ -44,6 +44,8 @@ in
     ttempsmooth = super.callPackage ./plugins/ttempsmooth { };
     wwxd = super.callPackage ./plugins/wwxd { };
     znedi3 = super.callPackage ./plugins/znedi3 { };
+
+    mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };
 
   getnative = callPythonPackage ./tools/getnative { };
