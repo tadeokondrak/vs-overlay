@@ -21,6 +21,7 @@ self: super: {
     median = super.callPackage ./plugins/median { };
     mvtools = super.vapoursynth-mvtools;
     nnedi3 = super.callPackage ./plugins/nnedi3 { };
+    nnedi3cl = super.callPackage ./plugins/nnedi3cl { };
     retinex = super.callPackage ./plugins/retinex { };
     sangnom = super.callPackage ./plugins/sangnom { };
     tcanny = super.callPackage ./plugins/tcanny { };
