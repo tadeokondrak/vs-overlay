@@ -1,4 +1,8 @@
-self: super: {
+self: super:
+let
+  callPythonPackage = super.vapoursynth.python3.pkgs.callPackage;
+in
+{
   vapoursynthPlugins = super.recurseIntoAttrs {
     adaptivegrain = super.callPackage ./plugins/adaptivegrain { };
     addgrain = super.callPackage ./plugins/addgrain { };
@@ -39,4 +43,6 @@ self: super: {
     wwxd = super.callPackage ./plugins/wwxd { };
     znedi3 = super.callPackage ./plugins/znedi3 { };
   };
+
+  getnative = callPythonPackage ./tools/getnative { };
 }
