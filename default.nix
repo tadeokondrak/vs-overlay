@@ -18,6 +18,7 @@ self: super: {
     histogram = super.callPackage ./plugins/histogram { };
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
     lsmashsource = super.callPackage ./plugins/lsmashsource { };
+    median = super.callPackage ./plugins/median { };
     mvtools = super.vapoursynth-mvtools;
     nnedi3 = super.callPackage ./plugins/nnedi3 { };
     retinex = super.callPackage ./plugins/retinex { };
