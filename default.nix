@@ -25,6 +25,7 @@ in
     f3kdb = super.callPackage ./plugins/f3kdb { };
     ffms2 = super.ffms;
     fft3dfilter = super.callPackage ./plugins/fft3dfilter { };
+    fluxsmooth = super.callPackage ./plugins/fluxsmooth { };
     fmtconv = super.callPackage ./plugins/fmtconv { };
     histogram = super.callPackage ./plugins/histogram { };
     hqdn3d = super.callPackage ./plugins/hqdn3d { };
