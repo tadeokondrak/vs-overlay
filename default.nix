@@ -55,6 +55,7 @@ in
 
     fvsfunc = callPythonPackage ./plugins/fvsfunc { };
     havsfunc = callPythonPackage ./plugins/havsfunc { };
+    kagefunc = callPythonPackage ./plugins/kagefunc { };
     muvsfunc = callPythonPackage ./plugins/muvsfunc { };
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };

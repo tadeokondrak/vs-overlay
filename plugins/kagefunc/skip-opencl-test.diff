@@ -1,0 +1,12 @@
+diff --git a/tests.py b/tests.py
+index 2a64cb9..ab2d2af 100644
+--- a/tests.py
++++ b/tests.py
+@@ -22,6 +22,7 @@ class KagefuncTests(unittest.TestCase):
+         # request a frame to see if that errors
+         mask.get_frame(0)
+ 
++    @unittest.skip("no OpenCL support in nix build sandbox")
+     def test_inverse_scale(self):
+         src = self.BLACK_SAMPLE_CLIP
+         resized = kgf.inverse_scale(self.GREYSCALE_SAMPLE_CLIP, height=90)
