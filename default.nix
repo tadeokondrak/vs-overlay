@@ -10,6 +10,7 @@ self: super: {
     bm3d = super.callPackage ./plugins/bm3d { };
     cnr2 = super.callPackage ./plugins/cnr2 { };
     continuityfixer = super.callPackage ./plugins/continuityfixer { };
+    ctmf = super.callPackage ./plugins/ctmf { };
     dctfilter = super.callPackage ./plugins/dctfilter { };
     deblock = super.callPackage ./plugins/deblock { };
     descale = super.callPackage ./plugins/descale { };
