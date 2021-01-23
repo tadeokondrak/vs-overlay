@@ -27,6 +27,7 @@ self: super: {
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
     lsmashsource = super.callPackage ./plugins/lsmashsource { };
     median = super.callPackage ./plugins/median { };
+    msmoosh = super.callPackage ./plugins/msmoosh { };
     mvtools = super.vapoursynth-mvtools;
     nnedi3 = super.callPackage ./plugins/nnedi3 { };
     nnedi3cl = super.callPackage ./plugins/nnedi3cl { };
