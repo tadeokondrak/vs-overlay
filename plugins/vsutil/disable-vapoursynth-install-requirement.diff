@@ -1,0 +1,12 @@
+diff --git a/setup.py b/setup.py
+index a66f14c..a7de6b4 100644
+--- a/setup.py
++++ b/setup.py
+@@ -45,7 +48,6 @@ setup(
+     author_email=meta['__author__'].split()[1][1:-1],
+     description='A collection of general-purpose Vapoursynth functions to be reused in modules and scripts.',
+     install_requires=[
+-        "vapoursynth"
+     ],
+     cmdclass={
+         'test': DiscoverTest
