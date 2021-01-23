@@ -1,0 +1,12 @@
+diff --git a/test/vsTAAmbkTestCase.py b/test/vsTAAmbkTestCase.py
+index ca85b73..7a70a00 100644
+--- a/test/vsTAAmbkTestCase.py
++++ b/test/vsTAAmbkTestCase.py
+@@ -64,6 +64,7 @@ class AATestCase(unittest.TestCase):
+                 message = message.format(kernel=key, depth=clip.format.bits_per_sample)
+                 print(message)
+ 
++    @unittest.skip("no OpenCL support in nix build sandbox")
+     def test_opencl(self):
+         test_clip = [self.gray8, self.gray16]
+         for clip in test_clip:
