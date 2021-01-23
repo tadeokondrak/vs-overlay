@@ -41,6 +41,7 @@ in
     sangnom = super.callPackage ./plugins/sangnom { };
     tcanny = super.callPackage ./plugins/tcanny { };
     tnlmeans = super.callPackage ./plugins/tnlmeans { };
+    ttempsmooth = super.callPackage ./plugins/ttempsmooth { };
     wwxd = super.callPackage ./plugins/wwxd { };
     znedi3 = super.callPackage ./plugins/znedi3 { };
   };
