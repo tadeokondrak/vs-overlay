@@ -18,6 +18,7 @@ self: super: {
     eedi3m = super.callPackage ./plugins/eedi3m { };
     f3kdb = super.callPackage ./plugins/f3kdb { };
     ffms2 = super.ffms;
+    fft3dfilter = super.callPackage ./plugins/fft3dfilter { };
     fmtconv = super.callPackage ./plugins/fmtconv { };
     histogram = super.callPackage ./plugins/histogram { };
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
