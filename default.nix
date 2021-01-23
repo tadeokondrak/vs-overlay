@@ -15,6 +15,7 @@ self: super: {
     f3kdb = super.callPackage ./plugins/f3kdb { };
     ffms2 = super.ffms;
     fmtconv = super.callPackage ./plugins/fmtconv { };
+    histogram = super.callPackage ./plugins/histogram { };
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
     lsmashsource = super.callPackage ./plugins/lsmashsource { };
     mvtools = super.vapoursynth-mvtools;
