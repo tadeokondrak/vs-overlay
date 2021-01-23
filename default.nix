@@ -1,5 +1,6 @@
 self: super: {
   vapoursynthPlugins = super.recurseIntoAttrs {
+    adaptivegrain = super.callPackage ./plugins/adaptivegrain { };
     addgrain = super.callPackage ./plugins/addgrain { };
     autocrop = super.callPackage ./plugins/autocrop { };
     awarpsharp2 = super.callPackage ./plugins/awarpsharp2 { };
