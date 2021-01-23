@@ -21,6 +21,7 @@ self: super: {
     fft3dfilter = super.callPackage ./plugins/fft3dfilter { };
     fmtconv = super.callPackage ./plugins/fmtconv { };
     histogram = super.callPackage ./plugins/histogram { };
+    hqdn3d = super.callPackage ./plugins/hqdn3d { };
     knlmeanscl = super.callPackage ./plugins/knlmeanscl { };
     lsmashsource = super.callPackage ./plugins/lsmashsource { };
     median = super.callPackage ./plugins/median { };
