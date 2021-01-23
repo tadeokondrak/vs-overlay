@@ -45,6 +45,8 @@ in
     wwxd = super.callPackage ./plugins/wwxd { };
     znedi3 = super.callPackage ./plugins/znedi3 { };
 
+    adjust = callPythonPackage ./plugins/adjust { };
+
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };
 
