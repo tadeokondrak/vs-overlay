@@ -54,6 +54,7 @@ in
     vsutil = callPythonPackage ./plugins/vsutil { };
 
     havsfunc = callPythonPackage ./plugins/havsfunc { };
+    muvsfunc = callPythonPackage ./plugins/muvsfunc { };
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };
 
