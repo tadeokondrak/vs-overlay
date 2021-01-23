@@ -53,6 +53,7 @@ in
     vsTAAmbk = callPythonPackage ./plugins/vsTAAmbk { };
     vsutil = callPythonPackage ./plugins/vsutil { };
 
+    fvsfunc = callPythonPackage ./plugins/fvsfunc { };
     havsfunc = callPythonPackage ./plugins/havsfunc { };
     muvsfunc = callPythonPackage ./plugins/muvsfunc { };
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
