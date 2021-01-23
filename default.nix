@@ -47,6 +47,7 @@ in
 
     adjust = callPythonPackage ./plugins/adjust { };
     edi_rpow2 = callPythonPackage ./plugins/edi_rpow2 { };
+    mt_lutspa = callPythonPackage ./plugins/mt_lutspa { };
     nnedi3_resample = callPythonPackage ./plugins/nnedi3_resample { };
     nnedi3_rpow2 = callPythonPackage ./plugins/nnedi3_rpow2 { };
 
