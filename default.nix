@@ -52,6 +52,7 @@ in
     nnedi3_rpow2 = callPythonPackage ./plugins/nnedi3_rpow2 { };
     vsutil = callPythonPackage ./plugins/vsutil { };
 
+    havsfunc = callPythonPackage ./plugins/havsfunc { };
     mvsfunc = callPythonPackage ./plugins/mvsfunc { };
   };
 
