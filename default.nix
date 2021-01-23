@@ -13,6 +13,7 @@ self: super: {
     dctfilter = super.callPackage ./plugins/dctfilter { };
     deblock = super.callPackage ./plugins/deblock { };
     descale = super.callPackage ./plugins/descale { };
+    dfttest = super.callPackage ./plugins/dfttest { };
     eedi2 = super.callPackage ./plugins/eedi2 { };
     eedi3m = super.callPackage ./plugins/eedi3m { };
     f3kdb = super.callPackage ./plugins/f3kdb { };
